@@ -10,3 +10,4 @@ test/dummy/storage/
 test/dummy/tmp/
 .tags*
 .DS_Store
+*.gem
