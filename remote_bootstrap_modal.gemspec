@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
   s.version     = RemoteBootstrapModal::VERSION
   s.authors     = ["Glauco Custódio"]
   s.email       = ["glauco.custodio@gmail.com"]
-  s.homepage    = "http://github.com"
+  s.homepage    = "https://github.com/glaucocustodio/remote_bootstrap_modal"
   s.summary     = "A tiny Rails engine that helps you loading remote links into a bootstrap modal"
   s.description = "A tiny Rails engine that helps you loading remote links into a bootstrap modal"
   s.license     = "MIT"

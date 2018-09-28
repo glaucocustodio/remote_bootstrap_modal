@@ -1,3 +1,7 @@
+### 0.1.1 (28/09/2018)
+
+* Fix `homepage` in the `gemspec` file
+
 ### 0.1.0 (28/09/2018)
 
 * Load `RemoteBootstrapModal::Responder` when initializing the engine (`include RemoteBootstrapModal::Responder` is no more required)
