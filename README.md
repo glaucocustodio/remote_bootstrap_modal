@@ -30,11 +30,10 @@ $ gem install remote_bootstrap_modal
 1. Make sure you have bootstrap in your application
 2. Add this gem to your Gemfile
 3. Add the following div `<div id="modal-holder"></div>` to your application layout (the modal will be rendered inside it)
-4. Add `//= require remote_bootstrap_modal/modal.js` to your `app/assets/javascripts/application.js` (after jquery)
-5. Add `include RemoteBootstrapModal::Responder` to your `ApplicationController`
-6. Set the formats you need to respond with `respond_to` (ex: `respond_to :html, :json`)
-7. Call `respond_modal_with` in your controller passing the arguments you need
-8. Pass `data: { modal: true }` to links you want to load into a modal (ex: `link_to 'Customers', customers_path, class: 'btn btn-default', data: { modal: true }`)
+4. Add `//= require remote_bootstrap_modal` to your `app/assets/javascripts/application.js` (after jquery)
+5. Set the formats you need to respond with `respond_to` (ex: `respond_to :html, :json`)
+6. Call `respond_modal_with` in your controller passing the arguments you need
+7. Pass `data: { modal: true }` to links you want to load into a modal (ex: `link_to 'Customers', customers_path, class: 'btn btn-default', data: { modal: true }`)
 
 ## Customization
 
