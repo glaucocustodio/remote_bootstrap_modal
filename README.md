@@ -35,6 +35,43 @@ $ gem install remote_bootstrap_modal
 6. Call `respond_modal_with` in your controller passing the arguments you need
 7. Pass `data: { modal: true }` to links you want to load into a modal (ex: `link_to 'Customers', customers_path, class: 'btn btn-default', data: { modal: true }`)
 
+## Example
+
+```ruby
+# app/controllers/messages_controller.rb
+class MessagesController < ApplicationController
+  respond_to :html, :json
+
+  def new
+    @message = Message.new
+    respond_modal_with @message
+  end
+
+  def create
+    @message = Message.create(message_params)
+    respond_modal_with @message, location: messages_path
+  end
+
+  private
+
+  def set_message
+    @message = Message.find(params[:id])
+  end
+
+  def message_params
+    params.require(:message).permit(:name, :body)
+  end
+end
+```
+
+```ruby
+<%# app/views/messages/index.html.erb %>
+<%= link_to 'Add Message', new_message_path, class: 'btn', data: { modal: true } %>
+
+<%# app/views/messages/_form.html.erb %>
+<%= simple_form_for(@message, remote: request.xhr?, html: { data: { modal: true } }) %>
+```
+
 ## Customization
 
 It is an engine, you can override any file to customize, you can create a `app/views/layouts/modal.html.erb` for instance with the modal layout you want.
