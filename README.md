@@ -6,18 +6,8 @@ It was created based on the following post: https://jtway.co/5-steps-to-add-remo
 ## Installation
 Add this line to your application's Gemfile:
 
-```ruby
-gem 'remote_bootstrap_modal'
-```
-
-And then execute:
-```bash
-$ bundle
-```
-
-Or install it yourself as:
-```bash
-$ gem install remote_bootstrap_modal
+```sh
+bundle add remote_bootstrap_modal
 ```
 
 ## Requirements
